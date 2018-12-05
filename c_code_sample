@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(int argc, const char * argv[]) {
+    int num[10],i,j,k,l,temp;
+    for(i=0;i<=9;i++)
+    {
+        int ta=2;
+        int tb=3;
+        int tc=4;
+        scanf("%d",&num[i]); //test1
+        if (ta < tb) {
+            ta = 1;
+        }
+        if ((ta+2) < tc) {
+            tc = 3;
+        }
+    }
+    for(j=0;j<9;j++)
+    {
+        int td=5;
+        for(k=j+1;k<=9;k++)
+        {
+            if(num[j]<num[k])
+            {
+                temp=num[j];
+                num[j]=num[k];
+                num[k]=temp; //test2
+            }
+        }
+    }
+    for(l=0;l<=9;l++)
+    {
+        printf("%d ",num[l]);
+    }
+    return 0;
+}
+

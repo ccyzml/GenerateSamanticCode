@@ -1,0 +1,27 @@
+int main(int argc, const char * argv[]) {
+    int num[10],i,j,k,l,temp;
+    for(i=0;i<=9;i++)
+    {
+        int ta=2;
+        int tb=3;
+        int tc=4;
+        ta=tb;
+        tb=tc;
+        tc=ta;
+        scanf("%d",&num[i]);
+    }
+    for(j=0;j<9;j++)
+    {
+        int td=5;
+    }
+    for(l=0;l<=9;l++)
+    {
+        printf("%d ",num[l]);
+    }
+    if(i<j)
+    {
+        printf("test");
+    }
+    return 0;
+}
+

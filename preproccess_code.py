@@ -1,11 +1,15 @@
 #去除头文件和comments
 class PreproccessCode:
 
-    def __init__(self, code):
+    def __init__(self,file_path):
+        code_list = open(file_path).readlines()
+        code = ''
+        for line in code_list:
+            code += line
         self._code = code
         self._remove_comments()
         self._head_code = self._stash_head_code()
-        self._pure_code = self._code.replace(self._head_code,'')
+        self._pure_code = self._code.replace(self.head_code, '')
 
     def _remove_comments(self):
         code_list = self._code.split('\n')

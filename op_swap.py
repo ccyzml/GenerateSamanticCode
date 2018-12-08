@@ -1,5 +1,13 @@
 import random
-def get_random_op(old_op):
-    ops = ['==','<','<=','>=','>']
-    ops.remove(old_op)
-    return ops[random.randint(0,len(ops)-1)]
+def get_error_op(old_op):
+    if old_op == '<':
+        return '<='
+    elif old_op == '>':
+        return '>='
+    elif old_op == '==':
+        return '=='
+    elif old_op == '>=':
+        return '>'
+    elif old_op == '<=':
+        return '<'
+    return '=='

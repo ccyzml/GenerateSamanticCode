@@ -10,3 +10,21 @@ void bubbleSort(int *arr, int n) {
             }
         }
 }
+int main() {
+    int arr[] = { 10,6,5,2,3,8,7,4,9,1 };
+    int n = sizeof(arr) / sizeof(int);
+    bubbleSort(arr, n);
+    printf("排序后的数组为：\n");
+    for (int j = 0; j<n; j++)
+        printf("%d ", arr[j]);
+    printf("\n");
+    int grade = 80;
+    switch(grade)
+    {
+        case 'A':printf("90-100\n");break;
+        case 'B':printf("75-89\n");break;
+        case 'C':printf("60-74\n");
+        case 'D':printf("<60\n");
+        default:printf("put in error\n");break;
+    }
+}
